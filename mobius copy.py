@@ -14,7 +14,7 @@ u, v = np.meshgrid(u, v)
 
 x = (1+w*v/2 * np.cos(u/2))*np.cos(u)
 y = (1+w*v/2 * np.cos(u/2))*np.sin(u)
-z = w*v/2 * np.sin(u/2)
+z = w*v/2 * 1j * np.cos(u/2)
 fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 
 ax.plot_surface(x, y, z, cmap=plt.get_cmap("plasma"))
