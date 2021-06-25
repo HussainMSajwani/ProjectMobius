@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Nonmobius solution}
+\author{hussain}
+\date{June 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Anstaz}
+Inspired by the Mobius strip line element, we use the Anstaz,
+\[
+ds^2 = dt^2 - f(u, v)du^2 - dv^2 -dw^2
+\]
+with $f:\mathbb R^2 \longrightarrow \mathbb R.$ The only nonzero entries of the Einstein tensor are
+
+\[
+G_{tt} = -G_{ww} = \frac{- 0.5 f{\left(u,v \right)} \frac{\partial^{2}}{\partial v^{2}} f{\left(u,v \right)} + 0.25 \left(\frac{\partial}{\partial v} f{\left(u,v \right)}\right)^{2}}{f^{2}{\left(u,v \right)}}.
+\]
+Setting $G_{tt}=0$ we obtain the following nonlinear PDE,
+\[
+(\partial_v f)^2 = 2f\partial_{vv}^2f.    
+\]
+The solution of which is 
+\[
+f(u, v) = \frac{1}{4}(vc_1(u) + c_2(u))^2.
+\]
+\section{potenial equivalent solutions in the literature}
+In \cite{stephani}
+\begin{itemize}
+    \item p102, eq 8.29
+    \item p364, eq 23.13a
+\end{itemize}
+
+
+\typeout{}
+\bibliographystyle{ieeetr}
+\bibliography{nonmobius.bib}
+
+    
+\end{document}
